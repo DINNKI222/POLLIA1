@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POLLIA - Team Pollitos</title>
+
+<style>
+body{
+margin:0;
+font-family:'Segoe UI', sans-serif;
+background: linear-gradient(135deg,#fff7cc,#ffe0a3);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+text-align:center;
+}
+
+.container{
+background: linear-gradient(180deg,#fffdf5,#fff3d6);
+padding:20px;
+border-radius:20px;
+width:92%;
+max-width:500px;
+box-shadow:0 8px 25px rgba(0,0,0,0.15);
+animation:fadeIn 0.8s ease;
+margin:15px 0;
+}
+
+.gradient-text{
+background: linear-gradient(90deg,#ffcc00,#ff8800);
+-webkit-background-clip:text;
+color:transparent;
+font-weight:bold;
+}
+
+button{
+margin:6px;
+padding:10px 15px;
+border:none;
+border-radius:20px;
+background: linear-gradient(90deg,#ffcc00,#ff9900);
+color:white;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.section{
+display:none;
+margin-top:10px;
+}
+
+.card{
+background:#fffaf0;
+padding:12px;
+border-radius:12px;
+margin-top:8px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+text-align:left;
+font-size:14px;
+}
+
+.question{
+background:#ffe8a3;
+padding:8px;
+border-radius:10px;
+margin:6px 0;
+cursor:pointer;
+font-weight:bold;
+}
+
+.answer{
+display:none;
+margin-top:5px;
+white-space:pre-line;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(10px);}
+to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="inicio">
+<h2>🐤 Bienvenido al</h2>
+<h1 class="gradient-text">TEAM POLLITOS</h1>
+<button onclick="entrar()">Entrar a POLLIA</button>
+</div>
+
+<div class="container section" id="pollia">
+<h2 class="gradient-text">✨ Bienvenido a POLLIA 🐤✨</h2>
+
+<button onclick="toggle('reglas')">📜 Reglas</button>
+<button onclick="toggle('rangos')">🏆 Rangos</button>
+<button onclick="toggle('eventos')">📢 Eventos</button>
+<button onclick="toggle('reportes')">🛡️ Reportes</button>
+<button onclick="toggle('sobre')">🐤 Sobre el Team</button>
+
+<div id="reglas" class="section"><div class="card">
+
+<div class="question" onclick="toggleAnswer(this)">¿Cuáles son las reglas del Team Pollitos?</div>
+<div class="answer">
+✨ Bienvenido, pollito. Para mantener una comunidad sana y fuerte, estas son nuestras normas oficiales:
+
+* No repetir comentarios negativos ni comportamientos de haters.
+* No mentir.
+* Respetar a Milumon en todo momento.
+* No hacer spam.
+* No promocionar otros creadores.
+* No usar groserías.
+* No hablar de ventas ni tradeos.
+* Confidencialidad del grupo verde.
+* No gritar en micrófono.
+* No insultar.
+* Prohibido usar hacks.
+* Informar faltas de respeto.
+* No quedarse AFK.
+* Escuchar el live.
+* No actitudes caprichosas.
+* Prohibidos actos obscenos.
+* Se valora la paciencia.
+* Eliminación por inactividad.
+* Apoyar comentando.
+* No robar en servidores SAB.
+
+💛 Ser pollito no es solo estar, es comportarse como uno.
+</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Qué pasa si hago spam?</div>
+<div class="answer">Serás advertido. Si continúas, serás silenciado.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Se permite faltar el respeto?</div>
+<div class="answer">No. Cualquier falta de respeto implica baneo automático.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Puedo promocionar otros canales?</div>
+<div class="answer">No está permitido promocionar otros creadores dentro del Team Pollitos.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Qué cosas están completamente prohibidas?</div>
+<div class="answer">
+* Faltas de respeto
+* Actos obscenos
+* Uso de hacks
+* Promoción externa
+* Comportamientos tóxicos
+</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Cuántas advertencias puedo recibir?</div>
+<div class="answer">Máximo 2 advertencias. Después se aplicará silencio o expulsión.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Las reglas aplican para todos los rangos?</div>
+<div class="answer">Sí. Se aplican absolutamente a todos.</div>
+
+</div></div>
+
+<!-- RANGOS -->
+<div id="rangos" class="section"><div class="card">
+<div class="question" onclick="toggleAnswer(this)">¿Cómo funcionan los rangos?</div>
+<div class="answer">
+Existen 3 rangos:
+🐣 Pre-Pollito
+🐤 Pollito
+🛡️ Moderador
+
+Se gana por conducta y confianza.
+</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Qué beneficios tiene cada rango?</div>
+<div class="answer">
+Pre-Pollito: Jugar en directos.
+Pollito: Jugar en directos y fuera de stream.
+Moderador: Supervisar reglas y apoyar a Milumon.
+</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Cómo puedo convertirme en moderador?</div>
+<div class="answer">Se gana con acciones, confianza y cero reportes.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Cada cuánto se revisan los rangos?</div>
+<div class="answer">No se revisan periódicamente. Se otorgan cuando se considera merecido.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Me pueden bajar de rango?</div>
+<div class="answer">Sí, por incumplimiento de reglas.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Qué responsabilidades tiene un líder?</div>
+<div class="answer">Dar ejemplo, actuar con justicia y proteger la comunidad.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Qué pasa si un moderador rompe las reglas?</div>
+<div class="answer">Será removido y puede ser baneado.</div>
+</div></div>
+
+<!-- EVENTOS -->
+<div id="eventos" class="section"><div class="card">
+<div class="question" onclick="toggleAnswer(this)">¿Cuándo hay eventos?</div>
+<div class="answer">16 de junio – Aniversario oficial del Team Pollitos.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Existen torneos?</div>
+<div class="answer">Solo durante el aniversario pueden organizarse dinámicas especiales.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Hay premios?</div>
+<div class="answer">Sí, pueden variar según la dinámica.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Dónde anuncian actividades?</div>
+<div class="answer">En historias de Milu, TikTok y página oficial.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Es obligatorio participar?</div>
+<div class="answer">No, pero demuestra compromiso.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Qué pasa si no asisto?</div>
+<div class="answer">No hay sanción.</div>
+</div></div>
+
+<!-- REPORTES -->
+<div id="reportes" class="section"><div class="card">
+<div class="question" onclick="toggleAnswer(this)">¿Cómo reporto?</div>
+<div class="answer">Contacta a un moderador por TikTok con pruebas claras.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Qué pruebas debo presentar?</div>
+<div class="answer">Testigos ayudan. No se aceptan reportes inválidos según contexto.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Cuánto tarda la revisión?</div>
+<div class="answer">Generalmente el mismo día.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Puedo reportar anónimo?</div>
+<div class="answer">No.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Qué pasa si me acusan falsamente?</div>
+<div class="answer">Puedes explicar tu versión. Se evaluará con justicia.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Problema con un moderador?</div>
+<div class="answer">Se revisará la situación y se buscará solución justa.</div>
+</div></div>
+
+<!-- SOBRE -->
+<div id="sobre" class="section"><div class="card">
+<div class="question" onclick="toggleAnswer(this)">¿Quién creó el Team Pollitos?</div>
+<div class="answer">Fue creado por Milumon.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Cuándo se fundó?</div>
+<div class="answer">16 de junio de 2024.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Cuál es la misión?</div>
+<div class="answer">Respeto, unión y lealtad.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Qué significa ser pollito?</div>
+<div class="answer">Ser parte de la familia virtual con compromiso.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Cómo invitar amigos?</div>
+<div class="answer">Invítalos a los lives de Milu.</div>
+
+<div class="question" onclick="toggleAnswer(this)">¿Tiene redes oficiales?</div>
+<div class="answer">Sí, están en la descripción del live.</div>
+</div></div>
+
+<button onclick="volver()">Volver</button>
+</div>
+
+<script>
+function entrar(){
+inicio.style.display="none";
+pollia.style.display="block";
+}
+function volver(){
+pollia.style.display="none";
+inicio.style.display="block";
+}
+function toggle(id){
+let s=document.getElementById(id);
+s.style.display=s.style.display==="block"?"none":"block";
+}
+function toggleAnswer(element){
+let answer=element.nextElementSibling;
+answer.style.display=answer.style.display==="block"?"none":"block";
+}
+</script>
+
+</body>
+</html>
